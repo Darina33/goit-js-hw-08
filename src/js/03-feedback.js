@@ -12,6 +12,7 @@ function inputForm(e) {
         email: form.elements.email.value,
         message: form.elements.message.value,
     }
+    
     const formDataJson = JSON.stringify(formData);
     try {
         localStorage.setItem(INPUT_TEXT, formDataJson);
