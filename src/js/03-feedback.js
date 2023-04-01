@@ -23,10 +23,13 @@ function inputForm(e) {
 
 function submitForm(e) {
     e.preventDefault();
+
     const formData = {
         email: form.elements.email.value,
         message: form.elements.message.value,
     }
+
+    if(formData.email !== "" && formData.message !== "")
     console.log(formData);
     e.currentTarget.reset();
     localStorage.removeItem(INPUT_TEXT);
