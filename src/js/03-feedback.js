@@ -24,6 +24,10 @@ function inputForm(e) {
 function submitForm(e) {
     e.preventDefault();
 
+        if (form.elements.email.value === '' || form.elements.message.value === '') {
+    return alert('Please fill in all the fields!');
+  }
+
     const formData = {
         email: form.elements.email.value,
         message: form.elements.message.value,
@@ -34,10 +38,7 @@ function submitForm(e) {
     localStorage.removeItem(INPUT_TEXT);
     e.currentTarget.reset();
     dataForm = {};
-
-        if (form.elements.email.value === '' || form.elements.message.value === '') {
-    return alert('Please fill in all the fields!');
-  }
+    
 }
 function fillTextForm() {
     const saveTextForm = localStorage.getItem(INPUT_TEXT);
