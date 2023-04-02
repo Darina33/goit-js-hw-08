@@ -28,10 +28,12 @@ function submitForm(e) {
         email: form.elements.email.value,
         message: form.elements.message.value,
     }
-
-    if(formData.email !== "" && formData.message !== "")
     console.log(formData);
     e.currentTarget.reset();
+
+    if (email.value === '' || message.value === '') {
+    return alert('Please fill in all the fields!');
+  }
     localStorage.removeItem(INPUT_TEXT);
     e.currentTarget.reset();
     dataForm = {};
