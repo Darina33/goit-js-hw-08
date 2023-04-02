@@ -31,7 +31,7 @@ function submitForm(e) {
     console.log(formData);
     e.currentTarget.reset();
 
-    if (email.value === '' || message.value === '') {
+    if (form.elements.email.value === '' || form.elements.message.value === '') {
     return alert('Please fill in all the fields!');
   }
     localStorage.removeItem(INPUT_TEXT);
