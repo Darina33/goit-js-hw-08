@@ -31,12 +31,13 @@ function submitForm(e) {
     console.log(formData);
     e.currentTarget.reset();
 
-    if (form.elements.email.value === '' || form.elements.message.value === '') {
-    return alert('Please fill in all the fields!');
-  }
     localStorage.removeItem(INPUT_TEXT);
     e.currentTarget.reset();
     dataForm = {};
+
+        if (form.elements.email.value === '' || form.elements.message.value === '') {
+    return alert('Please fill in all the fields!');
+  }
 }
 function fillTextForm() {
     const saveTextForm = localStorage.getItem(INPUT_TEXT);
