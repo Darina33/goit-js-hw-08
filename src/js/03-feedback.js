@@ -22,22 +22,22 @@ function inputForm(e) {
 }
 
 function submitForm(e) {
-    e.preventDefault();
 
         if (form.elements.email.value === '' || form.elements.message.value === '') {
     return alert('Please fill in all the fields!');
-  }
+        }
+    
+    e.preventDefault();
 
     const formData = {
         email: form.elements.email.value,
         message: form.elements.message.value,
     }
     console.log(formData);
-    e.currentTarget.reset();
 
-    localStorage.removeItem(INPUT_TEXT);
     e.currentTarget.reset();
-    dataForm = {};
+    localStorage.removeItem(INPUT_TEXT);
+
     
 }
 function fillTextForm() {
